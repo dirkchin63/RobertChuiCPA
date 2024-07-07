@@ -1,0 +1,25 @@
+
+# BEGIN WordPress
+# The directives (lines) between "BEGIN WordPress" and "END WordPress" are
+# dynamically generated, and should only be modified via WordPress filters.
+# Any changes to the directives between these markers will be overwritten.
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteBase /Robertchuicpa/
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /Robertchuicpa/index.php [L]
+</IfModule>
+
+# END WordPress
+# BEGIN Simply Static
+# 在含有 BEGIN Simply Static 及 END Simply Static 標記的這兩行間的指示詞內容為動態產生，
+# 且應僅有 WordPress 篩選器能進行修改。對這兩行間任何指示詞內容的變更，
+# 都會遭到系統覆寫。
+<Files "C:\xampp\htdocs\RobertChuiCPA/wp-content/uploads\simply-static\33ceab6661423d3cc93fed36436452d9-debug.txt">
+require all denied
+require host localhost
+</Files>
+# END Simply Static
